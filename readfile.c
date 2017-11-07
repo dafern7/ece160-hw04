@@ -48,7 +48,7 @@ int main ( int argc, char *argv[] )
         int ind;
 	int m;
         while (fgets(buffer,255,fp)) {
-                //printf("%s",buffer); //start from beginning of buffer
+                printf("%s",buffer); //start from beginning of buffer
 
                 stru = strtok(buffer," "); //reads from buffer to initial space
                 strcpy(s[x].first_name,stru); //records as first name

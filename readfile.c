@@ -46,11 +46,7 @@ int main ( int argc, char *argv[] )
         char *stru;
         int x = 0;
         int ind;
-		int m;
-
-        /* Here comes the actions! */
-        /* Read file line by line */
-
+	int m;
         while (fgets(buffer,255,fp)) {
                 //printf("%s",buffer); //start from beginning of buffer
 
@@ -69,7 +65,6 @@ int main ( int argc, char *argv[] )
 			printf("Mode?");
 			scanf("%d", &m);
 			print_student(m,s[ind]);	
-        /* Close file */
         fclose(fp);      
 	}
 	return(0);

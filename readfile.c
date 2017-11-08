@@ -46,6 +46,7 @@ int main ( int argc, char *argv[] )
         char *stru;
         int x = 0;
         int ind;
+		int curryear = 2017;
 	int m;
         while (fgets(buffer,255,fp)) {
                 printf("%s",buffer); //start from beginning of buffer
@@ -58,6 +59,14 @@ int main ( int argc, char *argv[] )
                 strcpy(s[x].major,stru);
                 stru = strtok(NULL,"\n"); //reads up to newline
                 s[x].year = atoi(stru);
+				if (s[x].year > curryear)
+				{
+				s[x].years_left = s[x].year - curryear;
+				}
+				else
+				{
+					s[x].years_left = 0;
+				}
                 x++; //repeat
                 }
 			printf("\nIndex of Student?");
